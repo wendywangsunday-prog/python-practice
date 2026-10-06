@@ -104,3 +104,33 @@ def count_vowels(text):
 sample_text = "Hello World! Python is Awesome."
 print(f"文字：{sample_text}")
 print(f"母語數量：{count_vowels(sample_text)}")
+
+#fizzbuzz(n)：3 的倍數回傳 "Fizz"，5 的倍數回傳 "Buzz"，同時是兩者的倍數回傳 "FizzBuzz"，
+# 其他回傳數字本身。再寫迴圈印出 1 到 20 的結果。
+def fizzbuzz(n):
+    if n%3 == 0:
+        return "Fizz"
+    elif n%5 == 9:
+        return "Buzz"
+    elif n%3 ==0 & n%5==0:
+        return "FizzBuzz"
+    else:
+        return str(n)
+
+print ("===1到20的結果===")
+for i in range(1,21):
+    print(f"{i}:{fizzbuzz(i)}")
+
+#score_report(scores)：自己寫一個函式，呼叫你之前寫的 calc_average 和 get_grade，
+# 回傳類似 平均 84.2，等級 B。
+
+def score_report(scores):
+    avg = calc_average(scores)
+    grade = get_grade(avg)
+
+    return f"平均{avg:.1f},等級{grade}"
+
+my_scores = [85, 92, 78,88,79]
+report = score_report(my_scores)
+print(f"成績：{my_scores}")
+print(f"成績報告：{report}")
